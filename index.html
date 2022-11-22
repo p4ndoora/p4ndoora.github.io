@@ -1,1 +1,99 @@
-pandora
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/norwester.css">
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="icon" href="img/favicon.ico">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <script>
+            function activate(id1, id2, id3) {
+                document.getElementById(id1).classList = 'active';
+                document.getElementById(id2).classList = '';
+                document.getElementById(id3).classList = '';
+            }
+
+            $(document).ready(function(){
+                let i = document.getElementById('frame')
+                i.contentWindow.scrollTo(0, i.contentDocument.body.scrollHeight);
+            });
+           
+
+        </script>
+
+        <title>PandoraSec</title>
+    </head>
+
+    
+    <body>
+        <div class="logo" onclick="window.location='/'">
+            <img src="img/logo_text.png" class="log" width="180px" height="80px">
+            <p class="sec">sec</p>
+        </div>
+        <nav class="nav-extended">
+            <div class="nav-wrapper" onclick="window.location='/'" style="cursor: pointer;">
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="SaaS.html" style="color: rgb(202, 68, 68); font-weight: bold;">SaaS</a></li>
+                <li><a href="https://github.com/p4ndoora" style="color:cornflowerblue; font-weight: bold;">Github</a></li>
+                <li><a href="https://discord.gg/pvG7eQdjDt" style="color: yellow; font-weight: bold;">Discord</a></li>
+              </ul>
+            </div>
+            <div class="nav-content">
+              <ul class="tabs tabs-transparent">
+                <li class="tab" onclick="activate('home_t', 'service_t', 'contact_t')"><a id="home_t" class="active" href="#home" style="color: rgb(202, 68, 68); font-weight: bold;">Home</a></li>
+                <li class="tab" onclick="activate('service_t', 'home_t', 'contact_t')"><a id="service_t" href="#service" style="color: cornflowerblue; font-weight: bold;">Service</a></li>
+                <li class="tab" onclick="activate('contact_t', 'service_t', 'home_t')"><a id="contact_t" href="#contact" style="color: yellow; font-weight: bold;">Contact</a></li>
+              </ul>
+            </div>
+        </nav>
+        
+        <ul class="sidenav" id="mobile-demo">
+          <li><a href="SaaS.html" style="color: rgb(202, 68, 68); font-weight: bold;">SaaS</a></li>
+          <li><a href="https://github.com/p4ndoora" style="color:cornflowerblue; font-weight: bold;">Github</a></li>
+          <li><a href="https://discord.gg/pvG7eQdjDt" style="color: yellow; font-weight: bold;">Discord</a></li>
+        </ul>
+        
+        <!---->
+        <div id="home" class="col s12" style="text-align: center;">
+            <p class="topic">Home</p>
+            <p class="p_for_info">  
+                 Chatroom (NOTE: Still pretty BUGGY) (NOTE: Admin roles are easy to access (don't trust anyone))
+            </p>
+            <iframe id="frame" width="70%" height="500px" class="chat_iframe" src="/chroom/index.php" onload="window.parent.scroll(0,0);"></iframe>
+        
+            <p class="p_for_info">
+We are an CyberSec GROUP/COMMUNITY,
+and were founded 2022 by <br/>(@0x - SYN: @delltaxa)<br/>
+            </p>
+        </div>
+        <!---->
+        <div id="service" class="col s12" style="text-align: center;">
+            <p class="topic">Service</p>
+            <p class="p_for_info">
+                In our private service we code hacking tools, malware, etc. for a cheap price
+                <br/><br/>
+                To get Access to our private (PROGRAMMING) Service,
+                dm @0x on our discord 
+            </p>
+        </div>
+        <!---->
+        <div id="contact" class="col s12" style="text-align: center;">
+            <p class="topic">Contact</p>
+            <p class="p_for_info">
+                Any questions? Join our <a href="https://discord.gg/pvG7eQdjDt">Discord</a></p>
+        </div>
+        <!---->
+
+
+        <!--
+        <div class="logo" onclick="window.location='/'">
+            <img src="img/logo_text.png" class="log" width="180px" height="80px">
+            <p class="sec">sec</p>
+        </div>
+        -->
+    </body>
+</html>
